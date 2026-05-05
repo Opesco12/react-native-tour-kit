@@ -32,7 +32,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Opesco12/react-native-tour-kit.git"
   },
   "peerDependencies": {
     "react": ">=18",
