@@ -167,14 +167,28 @@ function TourRoot({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
   const params = useLocalSearchParams();
+  const pathnameRef = useRef(pathname);
+  const paramsRef = useRef(params);
 
-  const navigation = createExpoRouterAdapter({
-    push: router.push,
-    replace: router.replace,
-    back: router.back,
-    getPathname: () => pathname,
-    getParams: () => params,
-  });
+  useEffect(() => {
+    pathnameRef.current = pathname;
+  }, [pathname]);
+
+  useEffect(() => {
+    paramsRef.current = params;
+  }, [params]);
+
+  const navigation = useMemo(
+    () =>
+      createExpoRouterAdapter({
+        push: (href) => router.push(href),
+        replace: (href) => router.replace(href),
+        back: () => router.back(),
+        getPathname: () => pathnameRef.current,
+        getParams: () => paramsRef.current,
+      }),
+    [router],
+  );
 
   return <TourProvider navigation={navigation}>{children}</TourProvider>;
 }
