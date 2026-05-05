@@ -16,7 +16,8 @@ Guided product tours for React Native with spotlight overlays, route-aware steps
 ## Installation
 
 ```bash
-npm install react-native-tour-kit react-native-svg
+npm install react-native-tour-kit
+npx expo install react-native-svg
 ```
 
 Peer requirements:
