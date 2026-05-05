@@ -4,7 +4,7 @@ Guided product tours for React Native with spotlight overlays, route-aware steps
 
 [![npm version](https://img.shields.io/npm/v/react-native-tour-kit.svg)](https://www.npmjs.com/package/react-native-tour-kit)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-tour-kit.svg)](https://www.npmjs.com/package/react-native-tour-kit)
-[![License](https://img.shields.io/github/license/your-username/react-native-tour-kit.svg)](./LICENSE)
+[![License](https://img.shields.io/github/license/Opesco12/react-native-tour-kit.svg)](./LICENSE)
 
 ## Features
 
