@@ -151,7 +151,10 @@ export const TourSectionList = <ItemT, SectionT = DefaultSectionT>({
 
         await delay(revealSettleMs, signal);
 
-        const failed = failedScrollInfoRef.current;
+        const failed = failedScrollInfoRef.current as {
+          index: number;
+          averageItemLength: number;
+        } | null;
         if (failed) {
           const fallbackOffset = Math.max(0, failed.averageItemLength * failed.index);
           (list as unknown as { scrollToOffset: (args: { offset: number; animated: boolean }) => void })

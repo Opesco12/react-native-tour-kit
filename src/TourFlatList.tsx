@@ -117,7 +117,10 @@ export const TourFlatList = <ItemT,>({
         }
         await delay(revealSettleMs, signal);
 
-        const failed = failedScrollInfoRef.current;
+        const failed = failedScrollInfoRef.current as {
+          index: number;
+          averageItemLength: number;
+        } | null;
         if (failed && failed.index === index) {
           const fallbackOffset = Math.max(0, failed.averageItemLength * failed.index);
           list.scrollToOffset({ offset: fallbackOffset, animated: true });
