@@ -2,6 +2,10 @@
 
 Guided product tours for React Native with spotlight overlays, route-aware steps, scroll/list reveal helpers, and optional seen-state persistence.
 
+[![npm version](https://img.shields.io/npm/v/react-native-tour-kit.svg)](https://www.npmjs.com/package/react-native-tour-kit)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-tour-kit.svg)](https://www.npmjs.com/package/react-native-tour-kit)
+[![License](https://img.shields.io/github/license/your-username/react-native-tour-kit.svg)](./LICENSE)
+
 ## Features
 
 - Spotlight overlays with `rectangle`, `rounded-rectangle`, `circle`, or `oval` cutouts
@@ -172,11 +176,8 @@ function TourRoot({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     pathnameRef.current = pathname;
-  }, [pathname]);
-
-  useEffect(() => {
     paramsRef.current = params;
-  }, [params]);
+  }, [pathname, params]);
 
   const navigation = useMemo(
     () =>
