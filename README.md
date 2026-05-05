@@ -190,7 +190,6 @@ function TourRoot({ children }: { children: React.ReactNode }) {
 - `buttonColors`, `tooltipBackground`, `tooltipTextColor`
 - `prompt` config for start prompt text/visibility
 - lifecycle callbacks via individual props or `lifecycle`
-- engine options via `engine` (`defaultReadiness`, `onFailure`)
 
 ## Persistence (Seen Tours)
 
@@ -210,14 +209,6 @@ Then use:
 - `isTourSeen("tourId")`
 - `markTourSeen("tourId")`
 - `clearTourSeen("tourId")`
-
-## Development
-
-```bash
-npm install
-npm run build
-npm run typecheck
-```
 
 ## License
 
